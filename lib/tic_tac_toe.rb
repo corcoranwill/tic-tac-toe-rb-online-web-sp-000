@@ -17,8 +17,8 @@ def display_board(board)
 
 end
 
-# Comment
-def display_board(board)
+# Converts user input to array index 
+def input_to_index(input)
 
 end
 
