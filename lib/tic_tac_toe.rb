@@ -26,7 +26,6 @@ def input_to_index(input)
   # return index
   # return -1 if a string
   input = input.to_i
-  puts input
   index = input-1
 end
 
