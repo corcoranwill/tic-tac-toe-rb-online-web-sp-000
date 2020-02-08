@@ -29,7 +29,6 @@ def input_to_index(input)
   index = input-1
 end
 
-
 # Executes the move
 def move(board, position, token)
   board[position] = token
