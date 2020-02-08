@@ -25,11 +25,17 @@ def input_to_index(input)
   # return -1 if a string
 end
 
+### REVISE THIS !!!!!!
 # Executes the move
-def move(board, position, token)
-  # does not allow for a 3rd default argument
-  # places the token on the board in the position specified
+def move(board, index, value = "X")
+  update_array_at_with(board, index, value)
 end
+
+def update_array_at_with(board, index, value)
+  board[index] = value
+end
+
+### REVISE THIS !!!!!! ^
 
 # Checks to see if the position is taken
 def position_taken?(board, position)
@@ -46,7 +52,6 @@ def valid_move?(board, position)
     if valid_position == false
       true
     end
-    # puts "Please enter 1-9:"
   end
 end
 
