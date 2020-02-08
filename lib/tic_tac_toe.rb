@@ -21,13 +21,14 @@ end
 def input_to_index(input)
   # convert input to integer
   # subtract 1, make an index
-  # return index 
+  # return index
   # return -1 if a string
 end
 
 # Comment
-def display_board(board)
-
+def move(board)
+  # does not allow for a 3rd default argument
+  s
 end
 
 # Comment
