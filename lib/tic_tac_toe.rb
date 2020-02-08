@@ -25,59 +25,72 @@ def input_to_index(input)
   # return -1 if a string
 end
 
-# Comment
+# Executes the move
 def move(board, position, token)
   # does not allow for a 3rd default argument
   # places the token on the board in the position specified
 end
 
-# Comment
+# Checks to see if the position is taken
 def position_taken?(board)
   # return true if a valid token is in a valid position
   # returns false if nil or " "
 end
 
-# Comment
+# Checks to see if a valid move
 def valid_move?(board)
-
+  # returns true if the move is made to a position that is valid (on the board) AND
+  # the position is not taken already
 end
 
-# Comment
+# Manages the turn
 def turn(board)
+  # asks for user input
+  # asks for input again if not valid
 
 end
 
-# Comment
+# Keeps track of how many turns have been played in the game by counting occupied positions
 def turn_count(board)
-
+  # counts occupied positions
 end
 
-# Comment
+# Keeps track of which players turn it is based on which player went last
 def current_player(board)
-
+  # returns the correct player
 end
 
 # Comment
 def won?(board)
-
+  # returns false for draw?()
+  # returns true for win()
 end
 
 # Comment
 def full?(board)
-
+  # returns true for draw?()
+  # returns false for game in-progress
 end
 
 # Comment
 def draw?(board)
-
+  # calls won?()
+  # calls full?()
+  # returns true for draw
+  # returns false for game won
+  # returns false for game in-progress
 end
 
 # Comment
 def over?(board)
-
+  # returns true for draw
+  # returns true for game won
+  # returns false for game in-progress
 end
 
 # Comment
 def winner(board)
-
+  # returns X when X won
+  # returns O when O won
+  # returns nil when no winner
 end
