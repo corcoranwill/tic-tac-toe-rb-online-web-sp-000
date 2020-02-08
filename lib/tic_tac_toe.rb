@@ -29,16 +29,11 @@ def input_to_index(input)
   index = input-1
 end
 
-### REVISE THIS !!!!!!
+
 # Executes the move
 def move(board, position, token)
-  update_array_at_with(board, position, token)
-end
-
-def update_array_at_with(board, position, token)
   board[position] = token
 end
-### REVISE THIS !!!!!! ^
 
 # Checks to see if the position is taken
 def position_taken?(board, position)
