@@ -26,14 +26,16 @@ def input_to_index(input)
 end
 
 # Comment
-def move(board)
+def move(board, position, token)
   # does not allow for a 3rd default argument
-  
+
 end
 
 # Comment
-def display_board(board)
-
+def position_taken?(board)
+  # return true if a valid token is in a valid position
+  # returns false if nil or " "
+  
 end
 
 # Comment
