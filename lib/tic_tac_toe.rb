@@ -28,7 +28,7 @@ end
 # Comment
 def move(board)
   # does not allow for a 3rd default argument
-  s
+  
 end
 
 # Comment
