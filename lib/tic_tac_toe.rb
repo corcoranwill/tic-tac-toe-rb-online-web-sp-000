@@ -49,10 +49,11 @@ def position_taken?(board, position)
   !(board[position].nil? || board[position] == " ")
 end
 
-# Checks to see if a valid move
+# Checks to position provided by user against board to see if position is taken
+#=> returns true if the move is made to a position that is valid (on the board) AND
+#=> the position is not taken already
 def valid_move?(board, position)
-  # returns true if the move is made to a position that is valid (on the board) AND
-  # the position is not taken already
+
   if position >= 0 && position <= 8
     valid_position = position_taken?(board, position)
     if valid_position == false
