@@ -1,5 +1,3 @@
-
-
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # top row
@@ -34,12 +32,12 @@ end
 
 ### REVISE THIS !!!!!!
 # Executes the move
-def move(board, index, token)
-  update_array_at_with(board, index, token)
+def move(board, position, token)
+  update_array_at_with(board, position, token)
 end
 
-def update_array_at_with(board, index, token)
-  board[index] = token
+def update_array_at_with(board, position, token)
+  board[position] = token
 end
 ### REVISE THIS !!!!!! ^
 
@@ -53,7 +51,6 @@ end
 #=> returns true if the move is made to a position that is valid (on the board) AND
 #=> the position is not taken already
 def valid_move?(board, position)
-
   if position >= 0 && position <= 8
     valid_position = position_taken?(board, position)
     if valid_position == false
@@ -62,16 +59,19 @@ def valid_move?(board, position)
   end
 end
 
-# Manages the turn
+# Manages the turn, should encapsulate the logic of a single, complete turn
+# 1. Ask user for move by position 1-9
+# 2. Receive the user input
+# 3. Convert input to index
+# 4. If move is valie, make the move and diplay the board
+# 5. If move is invalid, ask for a new position
+
 def turn(board)
-  # asks for user input
-  # asks for input again if not valid
   puts "Please enter 1-9:"
   input = gets.strip
-  index = input_to_index(input)
-
-  if valid_move?(board, index) == true
-    move(board, index)
+  position = input_to_index(input)
+  if valid_move?(board, position) == true
+    move(board, position)
     display_board(board)
   else
     turn(board)
@@ -80,7 +80,6 @@ end
 
 # Keeps track of how many turns have been played in the game by counting occupied positions
 def turn_count(board)
-  # counts occupied positions
   counter = 0
   board.each do |turn|
     if turn == "X" || turn == "O"
