@@ -28,7 +28,7 @@ end
 # Comment
 def move(board, position, token)
   # does not allow for a 3rd default argument
-  # places the token on the board in the position specified 
+  # places the token on the board in the position specified
 end
 
 # Comment
@@ -81,4 +81,3 @@ end
 def winner(board)
 
 end
-
