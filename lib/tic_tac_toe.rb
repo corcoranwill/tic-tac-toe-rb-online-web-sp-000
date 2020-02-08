@@ -53,11 +53,20 @@ end
 # Keeps track of how many turns have been played in the game by counting occupied positions
 def turn_count(board)
   # counts occupied positions
+  counter = 0
+  board.each do |turn|
+    if turn == "X" || turn == "O"
+      counter += 1
+    end
+    return counter
 end
 
 # Keeps track of which players turn it is based on which player went last
 def current_player(board)
   # returns the correct player
+  result = turn_count(board)
+  turn = result.even ? "X" : "O"
+  return turn 
 end
 
 # Comment
