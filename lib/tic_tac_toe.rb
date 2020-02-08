@@ -63,7 +63,7 @@ def turn(board)
   input = gets.strip
   position = input_to_index(input)
   if valid_move?(board, position)
-    move(board, position)
+    move(board, position, token)
     display_board(board)
   else
     turn(board)
