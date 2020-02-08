@@ -108,6 +108,7 @@ def draw?(board)
   # returns true for draw
   # returns false for game won
   # returns false for game in-progress
+  full?(board) && !won?(board)
 end
 
 # Comment
@@ -115,6 +116,8 @@ def over?(board)
   # returns true for draw
   # returns true for game won
   # returns false for game in-progress
+  draw?(board) ||
+  won?(board)
 end
 
 # Comment
