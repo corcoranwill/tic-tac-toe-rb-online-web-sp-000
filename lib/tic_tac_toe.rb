@@ -78,6 +78,7 @@ def turn_count(board)
       counter += 1
     end
     return counter
+  end
 end
 
 # Keeps track of which players turn it is based on which player went last
