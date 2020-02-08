@@ -34,14 +34,13 @@ end
 
 ### REVISE THIS !!!!!!
 # Executes the move
-def move(board, index, value = "X")
-  update_array_at_with(board, index, value)
+def move(board, index, token)
+  update_array_at_with(board, index, token)
 end
 
-def update_array_at_with(board, index, value)
-  board[index] = value
+def update_array_at_with(board, index, token)
+  board[index] = token
 end
-
 ### REVISE THIS !!!!!! ^
 
 # Checks to see if the position is taken
