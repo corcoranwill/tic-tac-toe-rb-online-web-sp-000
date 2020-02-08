@@ -66,7 +66,7 @@ def current_player(board)
   # returns the correct player
   result = turn_count(board)
   turn = result.even ? "X" : "O"
-  return turn 
+  return turn
 end
 
 # Comment
