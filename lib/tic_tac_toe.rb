@@ -32,9 +32,9 @@ def move(board, position, token)
 end
 
 # Checks to see if the position is taken
-def position_taken?(board)
-  # return true if a valid token is in a valid position
-  # returns false if nil or " "
+def position_taken?(board, position)
+  # returns false if position is NOT taken == yes, taken
+  !(board[position].nil? || board[position] == " ")
 end
 
 # Checks to see if a valid move
@@ -47,7 +47,16 @@ end
 def turn(board)
   # asks for user input
   # asks for input again if not valid
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
 
+  if valid_move?(board, index) == true
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
 end
 
 # Keeps track of how many turns have been played in the game by counting occupied positions
