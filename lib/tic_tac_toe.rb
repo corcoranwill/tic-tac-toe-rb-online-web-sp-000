@@ -38,9 +38,16 @@ def position_taken?(board, position)
 end
 
 # Checks to see if a valid move
-def valid_move?(board)
+def valid_move?(board, position)
   # returns true if the move is made to a position that is valid (on the board) AND
   # the position is not taken already
+  if position >= 0 && position <= 8
+    valid_position = position_taken?(board, position)
+    if valid_position == false
+      true
+    end
+    # puts "Please enter 1-9:"
+  end
 end
 
 # Manages the turn
