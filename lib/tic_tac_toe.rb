@@ -96,6 +96,9 @@ end
 def full?(board)
   # returns true for draw?()
   # returns false for game in-progress
+  board.all? do |token|
+    token == "X" || token == "O"
+  end
 end
 
 # Comment
