@@ -61,8 +61,8 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  puts "enter X or O"
-  token = gets.strip
+  # puts "enter X or O"
+  # token = gets.strip
   position = input_to_index(input)
   if valid_move?(board, position)
     move(board, position, token)
