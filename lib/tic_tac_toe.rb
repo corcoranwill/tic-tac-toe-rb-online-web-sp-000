@@ -58,12 +58,11 @@ end
 # 3. Convert input to index
 # 4. If move is valie, make the move and diplay the board
 # 5. If move is invalid, ask for a new position
-
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   position = input_to_index(input)
-  if valid_move?(board, position) == true
+  if valid_move?(board, position) 
     move(board, position)
     display_board(board)
   else
