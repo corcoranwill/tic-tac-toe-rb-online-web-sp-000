@@ -1,28 +1,3 @@
-# PLAY PSEUDOCODE
-
-# until the game is over
-#   take turns
-# end
-#
-# if the game was won
-#   congratulate the winner
-# else if the game was a draw
-#   tell the players it has been a draw
-# end
-
-
-def play(board)
-  until over?(board)
-    turn(board)
-  end
-  if winner(board)
-    puts "CONGRATS!, you won!"
-  end
-  if draw?(board)
-    puts "The game ended in a draw"
-  end
-end
-
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # top row
@@ -161,5 +136,18 @@ def winner(board)
   # returns nil when no winner
   if won?(board)
     board[won?(board)[0]]
+  end
+end
+
+
+def play(board)
+  until over?(board)
+    turn(board)
+  end
+  if winner(board)
+    puts "CONGRATS!, you won!"
+  end
+  if draw?(board)
+    puts "The game ended in a draw"
   end
 end
