@@ -12,10 +12,10 @@
 
 
 def play(board)
-  if !over?(board)
+  until over?(board)
     turn(board)
   end
-  if won?(board)
+  if winner(board)
     puts "CONGRATS!, you won!"
   end
   if draw?(board)
