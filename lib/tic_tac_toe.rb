@@ -74,10 +74,11 @@ end
 
 # Keeps track of which players turn it is based on which player went last
 def current_player(board)
-  # returns the correct player
-  result = turn_count(board)
-  token = result.even ? "X" : "O"
-  return token
+  if turn_count(board).even?
+    "X"
+  else
+    "O"
+  end
 end
 
 # Comment
