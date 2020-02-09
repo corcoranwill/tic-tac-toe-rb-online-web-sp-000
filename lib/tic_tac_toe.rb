@@ -29,16 +29,6 @@ def move(board, position, token)
   board[position] = token
 end
 
-# Checks to see if the position is taken, if taken, returns true
-def position_taken?(board, position)
-  board[position] == "X" || board[position] == "O"
-end
-
-# Checks position provided by user against board to see if position is taken
-def valid_move?(board, position)
-  !position_taken?(board, position) && position.between?(0,8)
-end
-
 # Keeps track of how many turns have been played in the game by counting occupied positions
 def turn_count(board)
   counter = 0
@@ -57,6 +47,16 @@ def current_player(board)
   else
     "O"
   end
+end
+
+# Checks to see if the position is taken, if taken, returns true
+def position_taken?(board, position)
+  board[position] == "X" || board[position] == "O"
+end
+
+# Checks position provided by user against board to see if position is taken
+def valid_move?(board, position)
+  !position_taken?(board, position) && position.between?(0,8)
 end
 
 # Manages the turn, should encapsulate the logic of a single, complete turn
