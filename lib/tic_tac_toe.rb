@@ -65,11 +65,11 @@ end
 def turn_count(board)
   counter = 0
   board.each do |token|
-    if token == "X" || token == "O"
+    if token != " "
       counter += 1
     end
-    return counter
   end
+  counter
 end
 
 # Keeps track of which players turn it is based on which player went last
