@@ -114,11 +114,8 @@ def over?(board)
   won?(board)
 end
 
-# Comment
+# returns X when X won, returns O when O won, returns nil when no winner
 def winner(board)
-  # returns X when X won
-  # returns O when O won
-  # returns nil when no winner
   if won?(board)
     board[won?(board)[0]]
   end
