@@ -29,36 +29,14 @@ def move(board, position, token)
   board[position] = token
 end
 
-# Checks to see if the position is taken
+# Checks to see if the position is taken, if taken, returns true
 def position_taken?(board, position)
-  # returns false if position is NOT taken == yes, taken
   board[position] == "X" || board[position] == "O"
 end
 
-# Checks to position provided by user against board to see if position is taken
-#=> returns true if the move is made to a position that is valid (on the board) AND
-#=> the position is not taken already
+# Checks position provided by user against board to see if position is taken
 def valid_move?(board, position)
   !position_taken?(board, position) && position.between?(0,8)
-end
-
-# Manages the turn, should encapsulate the logic of a single, complete turn
-# 1. Ask user for move by position 1-9
-# 2. Receive the user input
-# 3. Convert input to index
-# 4. If move is valie, make the move and diplay the board
-# 5. If move is invalid, ask for a new position
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  position = input_to_index(input)
-  token = current_player(board)
-  if valid_move?(board, position)
-    move(board, position, token)
-    display_board(board)
-  else
-    turn(board)
-  end
 end
 
 # Keeps track of how many turns have been played in the game by counting occupied positions
@@ -78,6 +56,25 @@ def current_player(board)
     "X"
   else
     "O"
+  end
+end
+
+# Manages the turn, should encapsulate the logic of a single, complete turn
+# 1. Ask user for move by position 1-9
+# 2. Receive the user input
+# 3. Convert input to index
+# 4. If move is valie, make the move and diplay the board
+# 5. If move is invalid, ask for a new position
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  position = input_to_index(input)
+  token = current_player(board)
+  if valid_move?(board, position)
+    move(board, position, token)
+    display_board(board)
+  else
+    turn(board)
   end
 end
 
