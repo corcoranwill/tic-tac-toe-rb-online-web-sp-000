@@ -39,12 +39,7 @@ end
 #=> returns true if the move is made to a position that is valid (on the board) AND
 #=> the position is not taken already
 def valid_move?(board, position)
-  if position >= 0 && position <= 8
-    valid_position = position_taken?(board, position)
-    if valid_position == false
-      true
-    end
-  end
+  !position_taken?(board, position) && position.between?(0,8)
 end
 
 # Manages the turn, should encapsulate the logic of a single, complete turn
