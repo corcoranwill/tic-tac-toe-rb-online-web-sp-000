@@ -103,13 +103,8 @@ def full?(board)
   end
 end
 
-# Comment
+# returns true for draw, returns false for game won, returns false for game in-progress
 def draw?(board)
-  # calls won?()
-  # calls full?()
-  # returns true for draw
-  # returns false for game won
-  # returns false for game in-progress
   full?(board) && !won?(board)
 end
 
