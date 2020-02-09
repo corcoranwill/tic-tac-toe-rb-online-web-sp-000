@@ -90,10 +90,8 @@ def won?(board)
   end
 end
 
-# Comment
+# checks to see if the board is full - with either X or O, if yes, return true
 def full?(board)
-  # returns true for draw?()
-  # returns false for game in-progress
   board.all? do |token|
     token == "X" || token == "O"
   end
