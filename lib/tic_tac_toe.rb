@@ -46,10 +46,6 @@ end
 
 # Converts user input to array index
 def input_to_index(input)
-  # convert input to integer
-  # subtract 1, make an index
-  # return index
-  # return -1 if a string
   input = input.to_i
   index = input-1
 end
