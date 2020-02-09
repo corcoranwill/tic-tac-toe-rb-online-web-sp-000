@@ -1,4 +1,4 @@
-# Define your WIN_COMBINATIONS constant
+# Define all TTT WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2], # top row
   [3,4,5], # middle row
@@ -32,7 +32,7 @@ end
 # Checks to see if the position is taken
 def position_taken?(board, position)
   # returns false if position is NOT taken == yes, taken
-  !(board[position].nil? || board[position] == " ")
+  !board[position] == "X" || board[position] == "O"
 end
 
 # Checks to position provided by user against board to see if position is taken
