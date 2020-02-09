@@ -78,10 +78,8 @@ def turn(board)
   end
 end
 
-# Comment
+# checks to see if any win_combo == all X or all O
 def won?(board)
-  # returns false for draw?()
-  # returns true for win()
   WIN_COMBINATIONS.detect do |win_combo|
     position_1 = board[win_combo[0]]
     position_2 = board[win_combo[1]]
