@@ -32,7 +32,7 @@ end
 # Checks to see if the position is taken
 def position_taken?(board, position)
   # returns false if position is NOT taken == yes, taken
-  !board[position] == "X" || board[position] == "O"
+  board[position] == "X" || board[position] == "O"
 end
 
 # Checks to position provided by user against board to see if position is taken
