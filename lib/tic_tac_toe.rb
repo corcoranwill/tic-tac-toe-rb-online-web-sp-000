@@ -64,8 +64,8 @@ end
 # Keeps track of how many turns have been played in the game by counting occupied positions
 def turn_count(board)
   counter = 0
-  board.each do |turn|
-    if turn == "X" || turn == "O"
+  board.each do |token|
+    if token == "X" || token == "O"
       counter += 1
     end
     return counter
