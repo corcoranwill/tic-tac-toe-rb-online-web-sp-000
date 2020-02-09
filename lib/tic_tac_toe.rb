@@ -1,4 +1,5 @@
-def play()
+# PLAY PSEUDOCODE
+
 # until the game is over
 #   take turns
 # end
@@ -8,6 +9,18 @@ def play()
 # else if the game was a draw
 #   tell the players it has been a draw
 # end
+
+
+def play(board)
+  if !over?(board)
+    turn(board)
+  end
+  if won?(board)
+    puts "CONGRATS!, you won!"
+  end
+  if draw?(board)
+    puts "The game ended in a draw"
+  end
 end
 
 # Define your WIN_COMBINATIONS constant
