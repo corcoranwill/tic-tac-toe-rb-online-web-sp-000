@@ -12,7 +12,7 @@
 
 
 def play(board)
-  if over?(board) == false
+  if !over?(board)
     turn(board)
   end
   if won?(board)
