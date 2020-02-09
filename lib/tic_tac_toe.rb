@@ -121,7 +121,7 @@ def winner(board)
   end
 end
 
-
+# primary method - plays the game until its won or draw
 def play(board)
   until over?(board)
     turn(board)
